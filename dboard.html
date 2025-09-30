@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="dboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <button class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>Student <span>Hub</span></h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-book"></i>Courses</a></li>
+                <li><a href="#"><i class="fas fa-calendar"></i>Schedule</a></li>
+                <li><a href="#"><i class="fas fa-users"></i>Study Groups</a></li>
+                <li><a href="#"><i class="fas fa-book-reader"></i>Resources</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <div class="header-content">
+                    <h1>Dashboard</h1>
+                    <div class="user-info">
+                        <i class="fas fa-bell"></i>
+                        <div class="user">
+                            <img src="https://via.placeholder.com/40" alt="User">
+                            <span>John Doe</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="cards">
+                    <div class="card">
+                        <i class="fas fa-book"></i>
+                        <div class="card-info">
+                            <h3>Current Courses</h3>
+                            <p>5 Active Courses</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-users"></i>
+                        <div class="card-info">
+                            <h3>Study Groups</h3>
+                            <p>3 Active Groups</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-calendar"></i>
+                        <div class="card-info">
+                            <h3>Upcoming Events</h3>
+                            <p>2 This Week</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <i class="fas fa-book"></i>
+                            <div class="activity-info">
+                                <h4>Mathematics Assignment Submitted</h4>
+                                <p>2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-users"></i>
+                            <div class="activity-info">
+                                <h4>Joined Physics Study Group</h4>
+                                <p>Yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const sidebar = document.querySelector('.sidebar');
+        
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
